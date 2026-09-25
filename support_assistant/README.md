@@ -20,7 +20,7 @@ graph TD
     
     Context --> Gen{Generation Mode}
     Gen -->|MOCK_LLM=1| Mock[Canned Template Answer]
-    Gen -->|MOCK_LLM=0| Real[Simulated LLM stub (validate-and-retry demo)]
+    Gen -->|MOCK_LLM=0| Real["Simulated LLM stub (validate-and-retry demo)"]
     
     Direct & Mock & Real --> Output[Pydantic JSON: answer, sources, confidence]
 ```
@@ -96,7 +96,7 @@ graph TD
 ```json
 {
   "answer": "Based on the retrieved context: doc_02 — Returns & Refunds: \"Grocery and perishable items may be reported for a return within 24 hours of delivery if damaged, spoiled, or incorrect; non-perishable packaged items may be returned with...",
-  "sources": ["doc_02", "doc_06", "doc_05"],
+  "sources": ["doc_02", "doc_05", "doc_06"],
   "confidence": 1.0
 }
 ```
